@@ -19,7 +19,7 @@ def number_lesson(current_time, time_period):
     return counter+1
 def parsing_lesson(group_id,current_time,today):
     if today == 6:
-        print("Сегодня воскресенье!С ума сошел? Иди отдыхай!")
+        my_schelude = "Сегодня воскресенье!С ума сошел? Иди отдыхай!"
     else:
         url = 'http://r.sf-misis.ru/teacher/'
         page = requests.get(url+group_id)
@@ -31,7 +31,7 @@ def parsing_lesson(group_id,current_time,today):
         table = one.find_all('td')[lesson-1].get_text().replace("\t", "")
         exist = "—" in table
         if exist:
-            print("У тебя нет пары! Отдохни!")
+             my_schelude = "У тебя нет пары! Отдохни!"
         else:
-            print("У тебя:",lesson,"-ая пара")
-            print(" ".join(table.split()).replace(". ",".",1))
+            my_schelude = "У тебя:"+str(lesson)+"-ая пара"+" ".join(table.split()).replace(". ",".",1)
+    return my_schelude
