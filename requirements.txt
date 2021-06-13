@@ -1,1 +1,3 @@
 pytelegrambotapi
+numpy
+bs4
