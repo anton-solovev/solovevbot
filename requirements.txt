@@ -1,3 +1,4 @@
 pytelegrambotapi
 numpy
 bs4
+BeautifulSoup

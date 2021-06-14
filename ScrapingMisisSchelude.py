@@ -24,8 +24,6 @@ def parsing_lesson(group_id,current_time,today):
         url = 'http://r.sf-misis.ru/teacher/'
         page = requests.get(url+group_id)
         soup = BeautifulSoup(page.text, 'lxml')
-        print("Сегодня: "
-              +soup.find_all(class_='table-weekdays')[today].get_text())
         one = soup.find_all('tr')[today+1]
         lesson = number_lesson(current_time, time_period)
         table = one.find_all('td')[lesson-1].get_text().replace("\t", "")
