@@ -31,5 +31,5 @@ def parsing_lesson(group_id,current_time,today):
         if exist:
              my_schelude = "У тебя нет пары! Отдохни!"
         else:
-            my_schelude = "У тебя:"+str(lesson)+"-ая пара"+" ".join(table.split()).replace(". ",".",1)
+            my_schelude = "У тебя: "+str(lesson)+"-ая пара  "+" ".join(table.split()).replace(". ",".",1)
     return my_schelude
