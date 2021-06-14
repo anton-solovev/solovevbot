@@ -1,7 +1,7 @@
  
 import telebot
 import ScrapingMisisSchelude
-token = '1871012202:AAEZKeB1AGmYNty2n5jwftN_yRAMe0kCEfA'
+token = 'token'
 bot = telebot.TeleBot(token)
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
